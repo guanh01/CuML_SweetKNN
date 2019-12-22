@@ -1,0 +1,523 @@
+data list file ='sbayx018.dat'/
+ year       1-  2 
+ gq         3-  3 
+ gqtypeg    4-  4 
+ farm       5-  5 
+ ownershg   6-  6 
+ value      7- 12 
+ rent      13- 16 
+ ftotinc   17- 22 
+ nfams     23- 24 
+ ncouples  25- 25 
+ nmothers  26- 26 
+ nfathers  27- 27 
+ momloc    28- 29 
+ stepmom   30- 30 
+ momrule   31- 31 
+ poploc    32- 33 
+ steppop   34- 34 
+ poprule   35- 35 
+ sploc     36- 37 
+ sprule    38- 38 
+ famsize   39- 40 
+ nchild    41- 41 
+ nchlt5    42- 42 
+ famunit   43- 44 
+ eldch     45- 46 
+ yngch     47- 48 
+ nsibs     49- 49 
+ relateg   50- 51 
+ age       52- 54 
+ sex       55- 55 
+ raceg     56- 56 
+ marst     57- 57 
+ chborn    58- 59 
+ bplg      60- 62 
+ school    63- 63 
+ educrec   64- 64 
+ schltype  65- 65 
+ empstatg  66- 66 
+ labforce  67- 67 
+ occ1950   68- 70 
+ occscore  71- 72 
+ sei       73- 74 
+ ind1950   75- 77 
+ classwkg  78- 78 
+ wkswork2  79- 79 
+ hrswork2  80- 80 
+ yrlastwk  81- 82 
+ workedyr  83- 83 
+ inctot    84- 89 
+ incwage   90- 95 
+ incbus    96-101 
+ incfarm  102-107 
+ incss    108-112 
+ incwelfr 113-117 
+ incother 118-122 
+ poverty  123-125 
+ migrat5g 126-126 
+ migplac5 127-129 
+ movedin  130-130 
+ vetstat  131-131 
+ tranwork 132-133 
+ 
+variable labels gq 'Group quarters status'.
+value labels gq 0 'Vacant unit'
+  1 'HH in 1970 definition, but sampled as larger unit'
+  2 'Additional hhs under 1990 definition'
+  3 'Institution'
+  4 'Other group quarters'
+  5 'Boarders and lodgers in 1900'
+  6 'Fragment'.
+ 
+variable labels gqtypeg 'Group quarters type--general'.
+value labels gqtypeg 0 'NA (household)' 1 'Institution (1990)'
+  2 'Correctional institutions'
+  3 'Mental institutions' 4 'Other institutions'
+  5 'Non-institutional GQ (1940, 1950, 1990)'
+  6 'Military' 7 'College dormitory' 8 'Rooming house'
+  9 'Other non-instit GQ and unknown'
+ 
+variable labels farm 'Farm status'.
+value labels farm 1 'Non-Farm' 2 'Farm'.
+ 
+variable labels ownershg 'Ownership of dwelling--general'.
+value labels ownershg 0 'N/A' 1 'Owned or being bought (loan)' 2 'Rented'.
+ 
+variable labels relateg 'Relationship to hh head--general'.
+value labels relateg 1 'Head/Householder' 2 'Spouse' 3 'Child'
+  4 'Child-in-law' 5 'Parent' 6 'Parent-in-Law' 7 'Sibling' 8 'Sibling-in-Law'
+  9 'Grandchild' 10 'Other relatives' 11 'Partner, friend, visitor'
+  12 'Other non-relatives' 13 'Institutional inmates'.
+ 
+variable labels sex 'Sex'.
+value labels sex 1 'Male' 2 'Female'.
+ 
+variable labels raceg 'Race--general'.
+value labels raceg 1 'White' 2 'Black/Negro' 3 'American Indian' 4 'Chinese'
+  5 'Japanese' 6 'Other Asian or Pacific' 7 'Other race, nec'.
+ 
+variable labels marst 'Marital status'.
+value labels marst 1 'Married, spouse present' 2 'Married, spouse absent'
+  3 'Separated' 4 'Divorced' 5 'Widowed' 6 'Never married/single'.
+ 
+variable labels chborn 'Children ever born'.
+value labels chborn 0 'N/A' 1 'No children' 2 '1 child' 3 '2  children' 4 '3'
+  5 '4' 6 '5' 7 '6' 8 '7' 9 '8' 10 '9' 11 '10 children' 12 '11'
+  13 '12 (12+ 1960-1990)' 14 '13' 15 '14' 16 '15' 17 '16' 18 '17' 19 '18'
+  20 '19' 21 '20' 22 '21' 23 '22' 24 '23' 25 '24' 26 '25 (25+ 1950)' 27 '26'
+  28 '27' 31 '30' 34 '33' 51 '50' 57 '56' 61 '60'.
+ 
+variable labels bplg 'Birthplace--general'.
+value labels bplg 001 'Alabama' 2 'Alaska' 4 'Arizona'
+  5 'Arkansas' 6 'California' 8 'Colorado' 9 'Connecticut'
+  10 'Delaware' 11 'District of Columbia' 12 'Florida' 13 'Georgia'
+  15 'Hawaii' 16 'Idaho' 17 'Illinois'
+  18 'Indiana' 19 'Iowa' 20 'Kansas' 21 'Kentucky'
+  22 'Louisiana' 23 'Maine' 24 'Maryland' 25 'Massachusetts'
+  26 'Michigan' 27 'Minnesota' 28 'Mississippi' 29 'Missouri'
+  30 'Montana' 31 'Nebraska' 32 'Nevada' 33 'New Hampshire'
+  34 'New Jersey' 35 'New Mexico'
+  36 'New York' 37 'North Carolina' 38 'North Dakota' 39 'Ohio'
+  40 'Oklahoma' 41 'Oregon' 42 'Pennsylvania'
+  44 'Rhode Island' 45 'South Carolina' 46 'South Dakota'
+  47 'Tennessee' 48 'Texas' 49 'Utah'
+  50 'Vermont' 51 'Virginia' 53 'Washington'
+  54 'West Virginia' 55 'Wisconsin' 56 'Wyoming'
+  90 'Native American' 99 'United States, ns'
+  100 'American Samoa' 105 'Guam'
+  110 'Puerto Rico' 115 'U.S. Virgin Islands'
+  120 'Other US Possessions' 150 'Canada' 160 'Atlantic Islands'
+  199 'North America, ns' 200 'Mexico' 210 'Central America'
+  250 'Cuba' 260 'West Indies' 300 'South America'
+  400 'Denmark' 401 'Finland' 402 'Iceland' 403 'Lapland' 404 'Norway'
+  405 'Sweden' 410 'England' 411 'Scotland' 412 'Wales'
+  413 'United Kingdom, ns' 414 'Ireland'
+  419 'Northern Europe, ns' 420 'Belgium' 421 'France'
+  422 'Liechtenstein' 423 'Luxembourg' 424 'Monaco'
+  425 'Netherlands' 426 'Switerland' 429 'Western Europe, ns'
+  430 'Albania' 431 'Andorra' 432 'Gibraltar' 433 'Greece'
+  434 'Italy' 435 'Malta' 436 'Portugal'
+  437 'San Marino' 438 'Spain' 439 'Vatican City'
+  440 'Southern Europe, ns' 450 'Austria'
+  451 'Bulgaria' 452 'Czechoslovakia'
+  453 'Germany' 454 'Hungary' 455 'Poland' 456 'Romania'
+  457 'Yugoslavia' 458 'Central Europe, ns' 459 'Eastern Europe, ns'
+  460 'Estonia' 461 'Latvia'
+  462 'Lithuania' 463 'Baltic States, ns' 465 'USSR/"Russia"'
+  499 'Europe, ns' 500 'China' 501 'Japan' 502 'Korea'
+  509 'East Asia, ns' 510 'Brunei' 511 'Cambodia (Kampuchea)'
+  512 'Indonesia' 513 'Laos'
+  514 'Malaysia' 515 'Philippines' 516 'Singapore' 517 'Thailand'
+  518 'Vietnam' 519 'Southeast Asia, ns' 520 'Afghanistan' 521 'India'
+  522 'Iran' 523 'Maldives' 524 'Nepal' 530 'Bahrain' 531 'Cyprus'
+  532 'Iraq' 533 'Iraq/Saudi Arabia' 534 'Israel/Palestine'
+  535 'Jordan' 536 'Kuwait' 537 'Lebanon' 538 'Oman' 539 'Qatar'
+  540 'Saudi Arabia' 541 'Syria' 542 'Turkey' 543 'United Arab Emirates'
+  544 'Yemen Arab Republic (North)' 545 'Yemen, PDR (South)'
+  546 'Persian Gulf States, ns'
+  547 'Middle East, ns' 548 'Southwest Asia, nec/ns' 549 'Asia Minor, ns'
+  550 'South Asia, nec' 599 'Asia, nec/ns' 600 'Africa'
+  700 'Australia and New Zealand' 710 'Pacific Islands'
+  800 'Antarctica, ns/nec' 900 'Abroad (unknown) or at sea'
+  997 'Missing/Unknown' 999 'Unknown value'.
+ 
+variable labels school 'School attendance'.
+value labels school 0 'N/A' 1 'No, not in school' 2 'Yes, in school'.
+ 
+variable labels educrec 'Educational attainment, recode'.
+value labels educrec 0 'N/A (or none, 1980)' 1 'None or preschool'
+  2 'Grade 1-4' 3 'Grade 5-8' 4 'Grade 9' 5 'Grade 10'
+  6 'Grade 11' 7 'Grade 12' 8 '1 to 3 years of college' 9 '4+ years of college'.
+ 
+variable labels schltype 'Public or private school'.
+value labels schltype 0 'N/A' 1 'Not enrolled' 2 'Public school'
+  3 'Private school (1960,1990)' 4 'Church-related (1980)' 5 'Parochial (1970)'
+  6 'Other private, 1980' 7 'Other private, 1970'.
+ 
+variable labels empstatg 'Employment status--general'.
+value labels empstatg 0 'N/A' 1 'Employed' 2 'Unemployed'
+  3 'Not in labor force'.
+ 
+variable labels labforce 'Labor force status'.
+value labels labforce 0 'N/A' 1 'No, not in labor force'
+  2 'Yes, in labor force'.
+ 
+variable labels occ1950 'Occupation, 1950 basis'.
+value labels occ1950 0 'Accountants and auditors' 1 'Actors and actresses'
+  2 'Airplane pilots and navigators' 3 'Architects'
+  4 'Artists and art teachers' 5 'Athletes' 6 'Authors' 7 'Chemists'
+  8 'Chiropractors' 9 'Clergymen' 10 'College presidents and deans'
+  12 'Aricultural sciences-Professors'
+  13 'Biological sciences-Professors'
+  14 'Chemistry-Professors'
+  15 'Economics-Professors'
+  16 'Engineering-Professors'
+  17 'Geology and geophysics-Professors'
+  18 'Mathematics-Professors'
+  19 'Medical Sciences-Professors'
+  23 'Physics-Professors'
+  24 'Psychology-Professors'
+  25 'Statistics-Professors'
+  26 'Natural science (nec)-Professors'
+  27 'Social sciences (nec)-Professors'
+  28 'Nonscientific subjects-Professors'
+  29 'Subject not specified-Professors'
+  31 'Dancers and dancing teachers' 32 'Dentists' 33 'Designers'
+  34 'Dieticians and nutritionists' 35 'Draftsmen' 36 'Editors and reporters'
+  41 'Aeronautical-Engineers' 42 'Chemical-Engineers' 43 'Civil-Engineers'
+  44 'Electrical-Engineers' 45 'Industrial-Engineers' 46 'Mechanical-Engineers'
+  47 'Metallurgical, metallurgists-Engineers' 48 'Mining-Engineers'
+  49 'Engineers (nec)' 51 'Entertainers (nec)'
+  52 'Farm and home management advisors' 53 'Foresters and conservationists'
+  54 'Funeral directors and embalmers' 55 'Lawyers and judges' 56 'Librarians'
+  57 'Musicians and music teachers' 58 'Nurses, professional'
+  59 'Nurses, student professional' 61 'Agricultural scientists'
+  62 'Biological scientists' 63 'Geologists and geophysicists'
+  67 'Mathematicians' 68 'Physicists' 69 'Misc. natural scientists'
+  70 'Optometrists' 71 'Osteopaths' 72 'Personnel and labor relations workers'
+  73 'Pharmacists' 74 'Photographers' 75 'Physicians and surgeons'
+  76 'Radio operators' 77 'Recreation and group workers' 78 'Religious workers'
+  79 'Social and welfare workers, except group' 81 'Economists'
+  82 'Psychologists' 83 'Statisticians and actuaries'
+  84 'Misc social scientists' 91 'Sports instructors and officials'
+  92 'Surveyors' 93 'Teachers (n.e.c.)' 94 'Medical and dental-technicians'
+  95 'Testing-technicians' 96 'Technicians (nec)'
+  97 'Therapists and healers (nec)' 98 'Veterinarians'
+  99 'Professional, technical & kindred workers (nec)'
+  100 'Farmers (owners and tenants)' 123 'Farm managers'
+  200 'Buyers and dept heads, store' 201 'Buyers and shippers, farm products'
+  203 'Conductors, railroad' 204 'Credit men'
+  205 'Floormen and floor managers, store'
+  210 'Inspectors, public administration'
+  230 'Managers & superintendants, building'
+  240 'Officers, pilots, pursers and engineers, ship'
+  250 'Officials & administratators (nec), public administration'
+  260 'Officials, lodge, society, union, etc.' 270 'Postmasters'
+  280 'Purchasing agents and buyers (nec)'
+  290 'Managers, officials, and proprietors (nec)' 300 'Agents (nec)'
+  301 'Attendants and assistants, library'
+  302 'Attendants, physicians and dentists office'
+  304 'Baggagemen, transportation' 305 'Bank tellers' 310 'Bookkeepers'
+  320 'Cashiers' 321 'Collectors, bill and account'
+  322 'Dispatchers and starters, vehicle'
+  325 'Express messengers and railway mail clerks' 335 'Mail carriers'
+  340 'Messengers and office boys' 341 'Office machine operators'
+  342 'Shipping and receiving clerks'
+  350 'Stenographers, typists, and secretaries' 360 'Telegraph messengers'
+  365 'Telegraph operators' 370 'Telephone operators'
+  380 'Ticket, station, and express agents'
+  390 'Clerical and kindred workers (n.e.c.)'
+  400 'Advertising agents and salesmen' 410 'Auctioneers' 420 'Demonstrators'
+  430 'Hucksters and peddlers' 450 'Insurance agents and brokers'
+  460 'Newsboys' 470 'Real estate agents and brokers'
+  480 'Stock and bond salesmen' 490 'Salesmen and sales clerks (nec)'
+  500 'Bakers' 501 'Blacksmiths' 502 'Bookbinders' 503 'Boilermakers'
+  504 'Brickmasons,stonemasons, and tile setters' 505 'Cabinetmakers'
+  510 'Carpenters' 511 'Cement and concrete finishers'
+  512 'Compositors and typesetters' 513 'Cranemen,derrickmen, and hoistmen'
+  514 'Decorators and window dressers' 515 'Electricians'
+  520 'Electrotypers and stereotypers' 521 'Engravers, except engravers'
+  522 'Excavating, grading, and road machinery operators' 523 'Foremen (nec)'
+  524 'Forgemen and hammermen' 525 'Furriers' 530 'Glaziers'
+  531 'Heat treaters, annealers, temperers'
+  532 'Inspectors, scalers, and graders log and lumber' 533 'Inspectors (nec)'
+  534 'Jewelers, watchmakers, goldsmiths, and silversmiths'
+  535 'Job setters, metal'
+  540 'Linemen and servicemen, telegraph, telephone, & power'
+  541 'Locomotive engineers' 542 'Locomotive firemen' 543 'Loom fixers'
+  544 'Machinists' 545 'Airplane-mechanics and repairmen'
+  550 'Automobile-mechanics and repairmen'
+  551 'Office machine-mechanics and repairmen'
+  552 'Radio and television-mechanics and repairmen'
+  553 'Railroad and car shop-mechanics and repairmen'
+  554 'Mechanics and repairmen (nec)' 555 'Millers, grain, flour, feed, etc'
+  560 'Millwrights' 561 'Molders, metal' 562 'Motion picture projectionists'
+  563 'Opticians and lens grinders and polishers'
+  564 'Painters, construction and maintenance' 565 'Paperhangers'
+  570 'Pattern and model makers, except paper'
+  571 'Photoengravers & lithographers'
+  572 'Piano and organ tuners and repairmen' 573 'Plasterers'
+  574 'Plumbers and pipe fitters' 575 'Pressmen and plate printers, printing'
+  580 'Rollers and roll hands, metal' 581 'Roofers and slaters'
+  582 'Shoemakers and repairers, except factory' 583 'Stationary engineers'
+  584 'Stone cutters and stone carvers' 585 'Structural metal workers'
+  590 'Tailors and tailoresses'
+  591 'Tinsmiths, coppersmiths, and sheet metal workers'
+  592 'Tool makers, and die makers and setters' 593 'Upholsterers'
+  594 'Craftsmen and kindred workers (nec)' 595 'Members of the armed services'
+  600 'Auto mechanics apprentice' 601 'Bricklayers and masons apprentice'
+  602 'Carpenters apprentice' 603 'Electricians apprentice'
+  604 'Machinists and toolmakers apprentice'
+  605 'Mechanics, except auto apprentice'
+  610 'Plumbers and and pipe fitters apprentice'
+  611 'Apprentices, building trades (nec)'
+  612 'Apprentices, metalworking trades (nec)'
+  613 'Apprentices, printing  trades' 614 'Apprentices, other specified trades'
+  615 'Apprentices, trade not specified' 620 'Asbestos and insulation workers'
+  621 'Attendants, auto service and parking' 622 'Blasters and powdermen'
+  623 'Boatmen, canalmen, and lock keepers' 624 'Brakemen, railroad'
+  625 'Bus drivers' 630 'Chainmen, rodmen, and axmen, surveying'
+  631 'Conductors, bus & street railway' 632 'Deliverymen and routemen'
+  633 'Dressmakers and seamstresses except factory' 634 'Dyers'
+  635 'Filers, grinders, and polishers, metal'
+  640 'Fruit, nut, and vegetable graders, and packers, except facto'
+  641 'Furnacemen, smeltermen and pourers' 642 'Heaters, metal'
+  643 'Laundry and dry cleaning Operatives'
+  644 'Meat cutters, except slaughter and packing house' 645 'Milliners'
+  650 'Mine operatives and laborers'
+  660 'Motormen, mine, factory, logging camp, etc'
+  661 'Motormen, street, subway, and elevated railway'
+  662 'Oilers and greaser, except auto'
+  670 'Painters, except construction or maintenance'
+  671 'Photographic process workers' 672 'Power station operators'
+  673 'Sailors and deck hands' 674 'Sawyers' 675 'Spinners, textile'
+  680 'Stationary firemen' 681 'Switchmen, railroad'
+  682 'Taxicab drivers and chauffeurs' 683 'Truck and tractor drivers'
+  684 'Weavers, textile' 685 'Welders and flame cutters'
+  690 'Operative and kindred workers (nec)'
+  700 'Housekeepers, private household' 710 'Laundressses, private household'
+  720 'Private household workers (nec)'
+  730 'Attendants, hospital and other institution'
+  731 'Attendants, professional and personal service (nec)'
+  732 'Attendants, recreation and amusement'
+  740 'Barbers, beauticians, and manicurists' 750 'Bartenders' 751 'Bootblacks'
+  752 'Boarding and lodging house keepers' 753 'Charwomen and cleaners'
+  754 'Cooks, except private household' 760 'Counter and fountain workers'
+  761 'Elevator operators' 762 'Firemen, fire protection'
+  763 'Guards, watchmen, and doorkeepers'
+  764 'Housekeepers and stewards, except private household'
+  770 'Janitors and sextons' 771 'Marshals and constables' 772 'Midwives'
+  773 'Policemen and detectives' 780 'Porters' 781 'Practical nurses'
+  782 'Sheriffs and bailiffs' 783 'Ushers, recreation and amusement'
+  784 'Waiters and waitresses' 785 'Watchmen (crossing) and bridge tenders'
+  790 'Service workers, except private household (nec)' 810 'Farm foremen'
+  820 'Farm laborers, wage workers' 830 'Farm laborers, unpaid family workers'
+  840 'Farm service laborers, self-employed' 910 'Fishermen and oystermen'
+  920 'Garage laborers and car washers and greasers'
+  930 'Gardeners, except farm, and groundskeepers'
+  940 'Longshoremen and stevedores' 950 'Lumbermen, raftsmen, and woodchoppers'
+  960 'Teamsters' 970 'Laborers (nec)'
+  980 'Keeps house/house work/housewife'
+  981 'Imputed keeping house (1860-1880)' 982 'At home/ helps in home'
+  983 'At school' 984 'Retired' 985 'Unemployed/ without occ'
+  986 'Invalid/sick/disabled' 987 'Inmate/prisoner' 988 'Ration Indian'
+  990 'Landlord' 991 'Capitalist/gentleman' 992 'Child labor-farm'
+  993 'Child labor-domestic' 994 'Child labor-other' 995 'Other non-occupation'
+  997 'Occupation missing/unknown'
+  999 'N/A (blank)'.
+ 
+variable labels ind1950 'Industry, 1950 basis'.
+value labels ind1950 0 'N/A' 1 'Ration Indians' 2 'Prisoners'
+  3 'Identified housework' 105 'Agriculture' 116 'Forestry' 126 'Fisheries'
+  206 'Metal mining' 216 'Coal mining'
+  226 'Crude petroleum and natural gas extraction'
+  236 'Nonmettalic  mining and quarrying, except fuel' 246 'Construction'
+  306 'Logging' 307 'Sawmills, planing mills, and mill work'
+  308 'Misc wood products' 309 'Furniture and fixtures'
+  316 'Glass and glass products'
+  317 'Cement, concrete, gypsum and plaster products'
+  318 'Structural clay products' 319 'Pottery and related prods'
+  326 'Misc nonmetallic mineral and stone products'
+  336 'Blast furnaces, steel works, & rolling mills'
+  337 'Other primary iron and steel industries'
+  338 'Primary nonferrous industries' 346 'Fabricated steel products'
+  347 'Fabricated nonferrous metal products'
+  348 'Not specified metal industries'
+  356 'Agricultural machinery and tractors' 357 'Office and store machines'
+  358 'Misc machinery' 367 'Electrical machinery, equipment and supplies'
+  376 'Motor vehicles and motor vehicle equipment' 377 'Aircraft and parts'
+  378 'Ship and boat building and repairing'
+  379 'Railroad and misc transportation equipment' 386 'Professional equipment'
+  387 'Photographic equipment and supplies'
+  388 'Watches, clocks, and clockwork-operated devices'
+  399 'Misc manufacturing industries' 406 'Meat products' 407 'Dairy products'
+  408 'Canning and preserving fruits, vegetables, and seafoods'
+  409 'Grain-mill products' 416 'Bakery products'
+  417 'Confectionary and related products' 418 'Beverage industries'
+  419 'Misc food preparations and kindred products'
+  426 'Not specified food industries' 429 'Tobacco manufactures'
+  436 'Knitting mills' 437 'Dyeing and finishing textiles, except knit goods'
+  438 'Carpets, rugs, and other floor coverings' 439 'Yarn, thread, and fabric'
+  446 'Misc textile mill products' 448 'Apparel and accessories'
+  449 'Misc fabricated textile products'
+  456 'Pulp, paper, and paper-board mills'
+  457 'Paperboard containers and boxes' 458 'Misc paper and pulp products'
+  459 'Printing, publishing, and allied industries' 466 'Synthetic fibers'
+  467 'Drugs and medicines' 468 'Paints, varnishes, and related products'
+  469 'Misc chemicals and allied products' 476 'Petroleum refining'
+  477 'Misc petroleum and coal products' 478 'Rubber products'
+  487 'Leather: tanned, curried, and finished' 488 'Footwear, except rubber'
+  489 'Leather products, except footwear'
+  499 'Not specified manufacturing industries' 506 'Railroads and railway'
+  516 'Street railways and bus lines' 526 'Trucking service'
+  527 'Warehousing and storage' 536 'Taxicab service'
+  546 'Water transportation' 556 'Air transportation'
+  567 'Petroleum and gasoline pipe lines'
+  568 'Services incidental to transportation' 578 'Telephone' 579 'Telegraph'
+  586 'Electric light and power' 587 'Gas and steam supply systems'
+  588 'Electric-gas utilities' 596 'Water supply' 597 'Sanitary services'
+  598 'Other and not specified utilities' 606 'Motor vehicles and equipment'
+  607 'Drugs, chemicals, and allied products' 608 'Dry goods apparel'
+  609 'Food and related products'
+  616 'Electrical goods, hardware, and plumbing equipment'
+  617 'Machinery, equipment, and supplies' 618 'Petroleum products'
+  619 'Farm prods--raw materials' 626 'Misc wholesale trade'
+  627 'Not specified wholesale trade' 636 'Food stores, except dairy'
+  637 'Dairy prods stores and milk retailing' 646 'General merchandise'
+  647 'Five and ten cent stores'
+  656 'Apparel and accessories stores, except shoe' 657 'Shoe stores'
+  658 'Furniture and house furnishings stores'
+  659 'Household appliance and radio stores'
+  667 'Motor vehicles and accessories retailing'
+  668 'Gasoline service stations' 669 'Drug stores'
+  679 'Eating and drinking  places' 686 'Hardware and farm implement stores'
+  687 'Lumber and building material retailing' 688 'Liquor stores'
+  689 'Retail florists' 696 'Jewelry stores' 697 'Fuel and ice retailing'
+  698 'Misc retail stores' 699 'Not specified retail trade'
+  716 'Banking and credit'
+  726 'Security and commodity brokerage and invest companies' 736 'Insurance'
+  746 'Real estate' 756 'Real estate-insurance-law  offices' 806 'Advertising'
+  807 'Accounting, auditing, and bookkeeping services'
+  808 'Misc business services' 816 'Auto repair services and garages'
+  817 'Misc repair services' 826 'Private households'
+  836 'Hotels and lodging places' 846 'Laundering, cleaning, and dyeing'
+  847 'Dressmaking shops' 848 'Shoe repair shops' 849 'Misc personal services'
+  856 'Radio broadcasting and television' 857 'Theaters and motion pictures'
+  858 'Bowling alleys, and billiard and pool parlors'
+  859 'Misc entertainment and recreation services'
+  868 'Medical and other health services, except hospitals' 869 'Hospitals'
+  879 'Legal services' 888 'Educational services'
+  896 'Welfare and religious services' 897 'Nonprofit membership organizs.'
+  898 'Engineering and architectural services'
+  899 'Misc professional and related' 906 'Postal service'
+  916 'Federal public administration' 926 'State public administration'
+  936 'Local public administration'
+  997 'Not classifiable' 998 'Industry not reported'.
+ 
+variable labels classwkg 'Class of worker--general'.
+value labels classwkg 0 'N/A' 1 'Self-employed' 2 'Works for wages/salary'
+  3 'New worker' 4 'Unemployed, last worked 5 years ago'.
+ 
+variable labels wkswork2 'Weeks worked last year, intervalled'.
+value labels wkswork2 0 'N/A' 1 '1-13 weeks' 2 '14-26 weeks' 3 '27-39 weeks'
+  4 '40-47 weeks' 5 '48-49 weeks' 6 '50-52 weeks'.
+ 
+variable labels hrswork2 'Hours work last week, intervalled'.
+value labels hrswork2 0 'N/A' 1 '1-14 hours' 2 '15-29 hours' 3 '30-34 hours'
+  4 '35-39 hours' 5 '40 hours' 6 '41-48 hours' 7 '49-59 hours' 8 '60+ hours'.
+ 
+variable labels yrlastwk 'Year last worked'.
+value labels yrlastwk 0 'N/A' 10 'Worked current yr' 20 'Worked previous yr'
+  31 'Worked 2 yrs prior' 32 'Worked 2-5 yrs ago' 33 'Worked 3-5 yrs ago'
+  34 'Worked 3-6 yrs ago' 35 'Worked 6-10 yrs ago' 36 'Worked 7-10 yrs ago'
+  40 'Worked more than 10 yrs ago' 50 'Never worked'.
+ 
+variable labels workedyr 'Worked last year'.
+value labels workedyr 0 'N/A' 1 'No' 2 'Yes'.
+ 
+variable labels migrat5g 'Migration status, 5 yrs--general'.
+value labels migrat5g 0 'N/A' 1 'Same house' 2 'Moved, place not reported'
+  3 'Same state/county,different house' 4 'Same state, different county'
+  5 'Different state' 6 'Abroad' 7 'Same state, place not reported'
+  9 'Unknown'.
+ 
+variable labels migplac5 'State/country resid. 5 yrs ago'.
+value labels migplac5 0 'N/A' 1 'Alabama' 2 'Alaska' 4 'Arizona' 5 'Arkansas'
+  6 'California' 8 'Colorado' 9 'Connecticut' 10 'Delaware'
+  11 'District of Columbia' 12 'Florida' 13 'Georgia' 15 'Hawaii' 16 'Idaho'
+  17 'Illinois' 18 'Indiana' 19 'Iowa' 20 'Kansas' 21 'Kentucky' 22 'Louisiana'
+  23 'Maine' 24 'Maryland' 25 'Massachusetts' 26 'Michigan' 27 'Minnesota'
+  28 'Mississippi' 29 'Missouri' 30 'Montana' 31 'Nebraska' 32 'Nevada'
+  33 'New Hampshire' 34 'New Jersey' 35 'New Mexico' 36 'New York'
+  37 'North Carolina' 38 'North Dakota' 39 'Ohio' 40 'Oklahoma' 41 'Oregon'
+  42 'Pennsylvania' 44 'Rhode Island' 45 'South Carolina' 46 'South Dakota'
+  47 'Tennessee' 48 'Texas' 49 'Utah' 50 'Vermont' 51 'Virginia'
+  53 'Washington' 54 'West Virginia' 55 'Wisconsin' 56 'Wyoming'
+  61 'State group (1980): Maine-New Hamp-Vermont'
+  62 'State group (1980): Massachusetts-Rhode Island'
+  63 'State group (1980): Minn-Iowa-Missouri-Kansas-Nebras'
+  64 'State group (1980): Maryland-Delaware'
+  65 'State group (1980): Montana-Idaho-Wyoming'
+  66 'State group (1980): Utah-Nevada'
+  67 'State group (1980): Arizona-New Mexico'
+  68 'State group (1980): Alaska-Hawaii'
+  99 'United States, n.s. or confidential'
+  100 'American Samoa' 105 'Guam' 110 'Puerto Rico' 115 'Virgin Islands'
+  119 'US outlying area, 1980' 150 'Canada' 151 'English Canada'
+  152 'French Canada' 160 'Atlantic Islands' 200 'Mexico'
+  211 'Belize/British Honduras' 212 'Costa Rica' 213 'El Salvador'
+  214 'Guatemala' 215 'Honduras' 216 'Nicaragua' 217 'Panama' 218 'Canal Zone'
+  219 'Central America, nec' 250 'Cuba' 261 'Dominican Republic' 262 'Haiti'
+  263 'Jamaica' 264 'British West Indies' 266 'Trinidad & Tobago'
+  267 'Other West Indies' 305 'Argentina' 310 'Bolivia' 315 'Brazil'
+  320 'Chile' 325 'Colombia' 330 'Ecuador' 345 'Paraguay' 350 'Peru'
+  360 'Uruguay' 365 'Venezuela' 390 'South America, nec' 400 'Denmark'
+  402 'Finland' 403 'Iceland' 404 'Ireland' 406 'Norway' 409 'Sweden'
+  410 'England' 413 'Northern Ireland' 415 'Scotland' 416 'Wales' 420 'Austria'
+  421 'Belgium' 422 'France' 424 'Luxembourg' 426 'Netherlands'
+  427 'Switzerland' 430 'Albania' 433 'Greece' 435 'Italy' 437 'Portugal'
+  438 'Azores' 441 'Spain' 450 'Czechoslovakia' 453 'Germany' 456 'Hungary'
+  457 'Poland' 460 'Yugoslavia' 470 'Bulgaria' 471 'Romania' 489 'Europe, nec'
+  490 'Estonia' 491 'Latvia' 492 'Lithuania' 495 'USSR' 496 'Byelorussia'
+  498 'Ukraine' 500 'China' 504 'Japan' 506 'Korea' 515 'Philippines'
+  518 'Vietnam' 521 'India' 525 'Pakistan' 527 'Iran' 535 'Israel/Palestine'
+  539 'Jordan' 541 'Lebanon' 545 'Syria' 546 'Turkey' 559 'Southwest Asia, nec'
+  590 'Asia, nec' 600 'Africa' 610 'Northern Africa'
+  612 'Egypt/United Arab Rep.' 670 'Central Africa' 690 'Southern Africa'
+  694 'South Africa (Union of)' 699 'Africa, nec' 701 'Australia'
+  702 'New Zealand' 710 'Pacific Islands' 715 'US Pacific Trust Terrs'
+  900 'Abroad (unknown) or at sea' 911 'Abroad, n.s.'
+  912 'Abroad, at sea' 990 'Same house'
+  997 'Undocumented value' 999 'Missing/unknown'.
+ 
+variable labels vetstat 'Veteran status'.
+value labels vetstat 0 'N/A' 1 'No Service' 2 'Yes' 9 'Not ascertained'.
+ 
+variable labels tranwork 'Means of transport to work'.
+value labels tranwork 00 'N/A (+ not reported 1960)' 10 'Auto, truck, or van'
+  11 'Auto' 12 'Driver' 13 'Passenger' 14 'Truck' 15 'Van' 20 'Motorcycle'
+  30 'Bus or streetcar' 31 'Bus or trolley bus' 32 'Streetcar or trolley car'
+  33 'Subway or elevated' 34 'Railroad' 35 'Taxicab' 36 'Ferryboat'
+  40 'Bicycle' 50 'Walked only' 60 'Other' 70 'Worked at home'.
+ 
