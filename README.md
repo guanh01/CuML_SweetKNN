@@ -91,9 +91,9 @@ See datasets/TESTING_README.md
 ## Comment
 
 ### Contribution of this repo: 
-* cleaned up Guoyang's implementation
-* mentioned that there are still some bugs need to be fixed as the results are not consistent with the standard KNN in CuML.
-* However, according to the other students, Guoyang's code can be executed successfully on all the datasets. There is a slight chance that Ben's optimization to the code breaks Guoyang's code.
+* Cleaned up the reference SweetKNN implementation
+* Mentioned that there are still some bugs need to be fixed as the results are not consistent with the standard KNN in CuML.
+* However, according to the other students, the reference SweetKNN code can be executed successfully on all the datasets. There is a slight chance that Ben's optimization to the code breaks the original code.
 
 ### Project description 
 cuML is an open-source machine learning library for GPU. It is part of the RAPIDS effort from NVIDIA. The goal of this project is to extend cuML by adding Sweet KNN into it.
